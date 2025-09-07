@@ -1,6 +1,10 @@
 # ShopRR - Modern E-Commerce Platform (React, Redux, Firebase & Stripe)
 
-Are you looking to build a modern, full-featured e-commerce platform? Look no further! ShopRR is a complete e-commerce solution built with React, Redux, and Firebase. This template provides everything you need to create a professional online store with user authentication, shopping cart, payment processing, and more. Start building your e-commerce empire today!
+Are you looking to build a modern, full-featured e-commerce platform? Look no
+further! ShopRR is a complete e-commerce solution built with React, Redux, and
+Firebase. This template provides everything you need to create a professional
+online store with user authentication, shopping cart, payment processing, and
+more. Start building your e-commerce empire today!
 
 ### Website preview
 
@@ -15,7 +19,8 @@ Are you looking to build a modern, full-featured e-commerce platform? Look no fu
 
 ## Features 📋
 
-⚡️ **Modern React Architecture** - Built with React 18, Redux, and React Router v6\
+⚡️ **Modern React Architecture** - Built with React 18, Redux, and React Router
+v6\
 ⚡️ **Firebase Integration** - User authentication and database management\
 ⚡️ **Stripe Payment Processing** - Secure payment handling\
 ⚡️ **Shopping Cart** - Full cart functionality with Redux state management\
@@ -40,6 +45,7 @@ Are you looking to build a modern, full-featured e-commerce platform? Look no fu
 ## Tech Stack 🛠️
 
 ### Frontend
+
 - **React 18** - Modern React with hooks and functional components
 - **Redux** - State management with Redux Toolkit
 - **Redux Saga** - Side effect management
@@ -49,11 +55,13 @@ Are you looking to build a modern, full-featured e-commerce platform? Look no fu
 - **SCSS** - Enhanced CSS with variables and mixins
 
 ### Backend & Services
+
 - **Firebase v9** - Authentication and Firestore database
 - **Stripe** - Payment processing
 - **Google OAuth** - Social authentication
 
 ### Development Tools
+
 - **Create React App** - Development environment
 - **Redux DevTools** - State debugging
 - **ESLint** - Code linting
@@ -79,7 +87,8 @@ git --version
 
 #### 1. Fork and Clone the repository
 
-To Fork the repo click on the fork button at the top right of the page. Once the repo is forked open your terminal and perform the following commands
+To Fork the repo click on the fork button at the top right of the page. Once the
+repo is forked open your terminal and perform the following commands
 
 ```bash
 git clone https://github.com/higordev223/shoprrr.git
@@ -106,12 +115,12 @@ yarn install
 
 ```javascript
 const firebaseConfig = {
-  apiKey: "your-api-key",
-  authDomain: "your-project.firebaseapp.com",
-  projectId: "your-project-id",
-  storageBucket: "your-project.appspot.com",
-  messagingSenderId: "your-sender-id",
-  appId: "your-app-id"
+  apiKey: 'your-api-key',
+  authDomain: 'your-project.firebaseapp.com',
+  projectId: 'your-project-id',
+  storageBucket: 'your-project.appspot.com',
+  messagingSenderId: 'your-sender-id',
+  appId: 'your-app-id',
 };
 ```
 
@@ -129,7 +138,8 @@ npm start
 yarn start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the
+result.
 
 ## Project Structure 📁
 
@@ -169,24 +179,28 @@ src/
 ## Key Features Explained 🚀
 
 ### Shopping Cart
+
 - Add/remove items with quantity management
 - Persistent cart state using Redux Persist
 - Real-time cart updates
 - Cart dropdown with item preview
 
 ### User Authentication
+
 - Google OAuth integration
 - User profile management
 - Protected routes
 - Session persistence
 
 ### Product Management
+
 - Dynamic product categories
 - Product filtering and search
 - Image optimization
 - Responsive product cards
 
 ### Payment Processing
+
 - Stripe integration for secure payments
 - Payment form validation
 - Order confirmation
@@ -197,17 +211,22 @@ src/
 In the project directory, you can run:
 
 ### `npm start`
+
 Runs the app in development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### `npm run build`
+
 Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+It correctly bundles React in production mode and optimizes the build for the best
+performance.
 
 ### `npm test`
+
 Launches the test runner in interactive watch mode.
 
 ### `npm run eject`
+
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
 ## Environment Variables 🔐
@@ -226,10 +245,12 @@ REACT_APP_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
 #### Step 1
 
 - **Option 1**
+
   - 🍴 Fork this repo!
 
 - **Option 2**
-  - 👯 Clone this repo to your local machine using `git clone https://github.com/higordev223/shoprrr.git`
+  - 👯 Clone this repo to your local machine using
+    `git clone https://github.com/higordev223/shoprrr.git`
 
 #### Step 2
 
@@ -265,14 +286,14 @@ REACT_APP_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
 
 ## License 📄
 
-This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE)
+file for details.
 
 ## Support 💬
 
 If you have any questions or need help with the project, feel free to:
 
 - Open an issue on GitHub
-- Contact me at [ruslanus866@outlook.com](mailto:ruslanus866@outlook.com)
 - Follow me on GitHub: [@higordev223](https://github.com/higordev223)
 
 ## Acknowledgments 🙏
