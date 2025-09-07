@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, withRouter } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 
 import { connect } from 'react-redux';
 
@@ -17,7 +17,6 @@ class ShopPage extends React.Component {
     fetchCollectionsStart();
   }
   render() {
-    const { match } = this.props;
     const timeout = { enter: 800, exit: 0 };
     const { location } = this.props;
     const currentKey = location.pathname.split('/shop')[1] || '/';
@@ -33,15 +32,16 @@ class ShopPage extends React.Component {
               unmountOnExit={true}
             >
               <div className="fades">
-                <Route
-                  exact
-                  path={`${match.path}`}
-                  component={collectionsContainer}
-                />
-                <Route
-                  path={`${match.path}/:categoryId`}
-                  component={categoryContainer}
-                />
+                <Routes>
+                  <Route
+                    path="/"
+                    element={React.createElement(collectionsContainer)}
+                  />
+                  <Route
+                    path="/:categoryId"
+                    element={React.createElement(categoryContainer)}
+                  />
+                </Routes>
               </div>
             </CSSTransition>
           </TransitionGroup>
@@ -63,4 +63,4 @@ const ShopContainer = styled.div`
 const mapDispatchToProps = dispatch => ({
   fetchCollectionsStart: () => dispatch(fetchCollectionsStart()),
 });
-export default connect(null, mapDispatchToProps)(withRouter(ShopPage));
+export default connect(null, mapDispatchToProps)(ShopPage);

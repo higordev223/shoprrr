@@ -1,15 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, withRouter } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
 import { selectCollectionsForPreview } from '../../redux/shop/shop.selectors';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 
-const TabDiv = ({ match, collections }) => {
+const TabDiv = ({ collections }) => {
+  const location = useLocation();
+  const { categoryId } = useParams();
+
   return (
     <TabDivContainer className="d-md-flex d-block justify-content-center">
-      <Link to={`/shop`} className={match.path === '/shop' ? 'active-tab' : ''}>
+      <Link
+        to={`/shop`}
+        className={location.pathname === '/shop' ? 'active-tab' : ''}
+      >
         Featured
       </Link>
       {collections.map(({ title, id }) => {
@@ -17,9 +23,7 @@ const TabDiv = ({ match, collections }) => {
           <Link
             to={`/shop/${title.toLowerCase()}`}
             className={
-              match.params.categoryId === `${title.toLowerCase()}`
-                ? 'active-tab'
-                : ''
+              categoryId === `${title.toLowerCase()}` ? 'active-tab' : ''
             }
             key={id}
           >
@@ -58,9 +62,8 @@ const TabDivContainer = styled.div`
 
 TabDiv.propTypes = {
   collections: PropTypes.array,
-  match: PropTypes.object,
 };
 const mapStateToProps = createStructuredSelector({
   collections: selectCollectionsForPreview,
 });
-export default connect(mapStateToProps, null)(withRouter(TabDiv));
+export default connect(mapStateToProps, null)(TabDiv);

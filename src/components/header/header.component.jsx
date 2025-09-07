@@ -3,7 +3,6 @@ import { Nav, NavDropdown, Navbar, Container } from 'react-bootstrap';
 import { NavLink, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import CartIcon from '../cart-icon/cart-icon.component';
-import { withRouter } from 'react-router-dom';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
 import { selectCartHidden } from '../../redux/cart/cart.selector';
@@ -140,4 +139,4 @@ const mapStateToProps = createStructuredSelector({
 const mapDispatchToProps = dispatch => ({
   signOut: () => dispatch(signOutStart()),
 });
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Header));
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

@@ -1,6 +1,6 @@
 import { put, call } from 'redux-saga/effects';
 import { setAlert, removeAlert } from '../alert/alert.actions';
-import uuid from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 
 let to;
 
@@ -22,7 +22,7 @@ function* updateAlert(id) {
 }
 
 export function* addAlert(msg, type) {
-  const id = uuid.v4();
+  const id = uuidv4();
   try {
     yield put(setAlert(msg, type, id));
     yield updateAlert(id);
